@@ -13,6 +13,8 @@ type user struct {
 func findUser(users []user, name string) (v *user, err error) {
 	for _, u := range users {
 		if u.name == name {
+			//fmt.Println(u)
+			//fmt.Println(&u)
 			return &u, nil
 		}
 	}

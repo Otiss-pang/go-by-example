@@ -11,6 +11,7 @@ func (u user) checkPassword(password string) bool {
 	return u.password == password
 }
 
+// 注意这里要用传引用，才能修改到user
 func (u *user) resetPassword(password string) {
 	u.password = password
 }

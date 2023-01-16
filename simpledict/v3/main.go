@@ -88,7 +88,7 @@ func main() {
 		log.Fatal(err)
 	}
 	var dictResponse DictResponse
-	err = json.Unmarshal(bodyText, &dictResponse)
+	err = json.Unmarshal(bodyText, &dictResponse) // 反序列化 这里要用&传引用
 	if err != nil {
 		log.Fatal(err)
 	}

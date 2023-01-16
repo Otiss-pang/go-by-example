@@ -9,7 +9,7 @@ func main() {
 	fmt.Println(m)           // map[one:1 two:2]
 	fmt.Println(len(m))      // 2
 	fmt.Println(m["one"])    // 1
-	fmt.Println(m["unknow"]) // 0
+	fmt.Println(m["unknow"]) // 0 key不存在的话返回默认值
 
 	r, ok := m["unknow"]
 	fmt.Println(r, ok) // 0 false

@@ -2,8 +2,11 @@ package main
 
 import "fmt"
 
+// slice和java中的ArrayList类似，是可变长数组
 func main() {
-
+	haha := make([]string, 10)
+	haha[0] = "this"
+	println(haha[0])
 	s := make([]string, 3)
 	s[0] = "a"
 	s[1] = "b"

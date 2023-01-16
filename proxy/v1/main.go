@@ -17,13 +17,13 @@ func main() {
 			log.Printf("Accept failed %v", err)
 			continue
 		}
-		go process(client)
+		go process(client) // go启动一个相当于子线程
 	}
 }
 
 func process(conn net.Conn) {
 	defer conn.Close()
-	reader := bufio.NewReader(conn)
+	reader := bufio.NewReader(conn) // 待缓冲流
 	for {
 		b, err := reader.ReadByte()
 		if err != nil {

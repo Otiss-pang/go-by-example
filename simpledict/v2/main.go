@@ -18,7 +18,7 @@ type DictRequest struct {
 func main() {
 	client := &http.Client{}
 	request := DictRequest{TransType: "en2zh", Source: "good"}
-	buf, err := json.Marshal(request)
+	buf, err := json.Marshal(request) // 序列化
 	if err != nil {
 		log.Fatal(err)
 	}
